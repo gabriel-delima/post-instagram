@@ -2,21 +2,37 @@
     margin: 0px;
     padding: 0px;
 }
-html, body{
+html,
+body {
     height: 100%;
+    width: 100%;
 }
 body{
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: snow;
+    color: rgba(0,0,0,0.8);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
 }
-a{
+
+a, a:visited{
     color:black;
     text-decoration:none;
+    font-weight: 550;
+    font-size: 13px;
 }
-a:visited{
-    color:black;
-    text-decoration:none;
+.profile-link-name:hover{
+    text-decoration: underline;
+}
+.date{
+    color: rgba(0,0,0,0.5);
+    font-weight: 500;
+    font-size: 10px;
 }
 
 /* -------------------- header */
@@ -55,7 +71,6 @@ a:visited{
     cursor: text;
 }
 #search-bar input{
-    color: rgba(0,0,0,0.5);
     width: 200px;
     height: 90%;
     outline: none;
@@ -98,6 +113,12 @@ main{
     display: flex;
     justify-content: center;
 }
+@-moz-document url-prefix() {   /* essa parte serve somente     */
+    main{                       /* pra corrigir um erro de      */
+        margin-left: -100%;     /* formatação que acontecia     */
+    }                           /* apenas no navegador firefox  */
+}
+
 /* -------------------- content */
 #main-content{
     width: 900px;
@@ -106,6 +127,7 @@ main{
     display: flex;
     align-items: center;
 }
+/* post*/
 #post{
     width: 550px;
     height: 550px;
@@ -113,13 +135,17 @@ main{
 .post-pic{
     width: 100%;
 }
+
+/* side-bar */
 #side-bar{
     width: 348px;
     height: 550px;
     background-color: white;
     border: 1px solid rgb(219,219,219);
     border-radius: 1%;
+    overflow: hidden;
 }
+/* side-bar-header */
 #side-bar-header{
     display:flex;
     align-items: center;
@@ -132,28 +158,46 @@ main{
     border: 1px solid rgb(219,219,219);
     border-radius: 100%;
 }
+#side-bar-header .profile-pic{
+    margin-left: 20px;
+    margin-right: 17px;
+}
 #dot-icon{
+    margin: 0px 5px;
     width: 7px;
 }
 #plus-icon{
+    margin-left: 120px;
     width: 15px;
 }
-
-#comments-area{
+#plus-icon:hover{
+    cursor: pointer;
+}
+/* side-bar-desscription-and-comments */
+#post-description-and-comments-area{
     width: 328px;
-    height: 328px;
-    padding: 10px;
+    height: 298px;
+    padding: 20px 10px;
     overflow-y: scroll;
     border-bottom: 5px solid white;
+    display: flex;
+    justify-content: center;
+    scrollbar-width: none;
 }
-#comments-area p{
-    justify-self: center;
+#post-description{
+    padding-top: 5px;
+    width: 70%;
+    margin-left: 5%;
+}
+#post-description p a{
+    margin-right: 5px;
+}
 
-}
-#comments-area::-webkit-scrollbar {
+#post-description-and-comments-area::-webkit-scrollbar {
     display: none;
-}
+}  /* infelizmente não consegui esconder a barra no firefox*/ 
 
+/* side-bar-footer */
 #side-bar-footer{
     height: 140px;
     border-top: 1px solid rgb(219,219,219);
@@ -164,23 +208,44 @@ main{
     height: 35px;
 }
 #side-bar-footer-icons img{
+    margin: 15px 7px;
     height: 70%;
+    cursor: pointer;
 }
-
+#side-bar-footer-icons img:first-child{
+    margin-left: 20px;
+}
+#side-bar-footer-icons img:last-child{
+    margin-left: 155px;
+    height: 55px
+}
+/* side-bar-footer likes area*/
 #side-bar-footer-likes{
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     display: flex;
     height: 35px;
-    border-bottom: 1px solid rgb(219,219,219);
 }
-
+#side-bar-footer-likes p{
+    max-width: 160px;
+    margin-left: 5px;
+}
+#side-bar-footer-likes .profile-pic{
+    height: 20px;
+    margin-left: 15px;
+}
+#side-bar-footer-likes .date{
+    width: 100%;
+}
+/* side-bar-footer comment input area*/
 #side-bar-footer-comment{
+    border-top: 1px solid rgb(219,219,219);
     display: flex;
     align-items: center;
     width: 100%;
     height: 49px;
 }
 #comment-input{
+
     border: none;
     outline: none;
     background: none;
@@ -188,3 +253,14 @@ main{
     height:70%;
     width: 75%;
 }
+#side-bar-footer-comment p{
+    color:rgb(183,225,253);
+    cursor: pointer;
+}
+/* date of post*/
+#date-of-post{
+    margin-top: 2px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
