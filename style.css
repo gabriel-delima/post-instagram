@@ -1,0 +1,168 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: snow;
+}
+
+/* -------------------- header */
+#main-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    background-color:white;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+#link-logo-header{
+    margin-left: 15%;
+    width: 10%;
+    height: 70%;
+}
+#logo-header{
+    height: 100%;
+}
+
+
+#search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    background-color: #eee;
+    border: 1px solid rgb(219,219,219);
+    border-radius: 5px;
+    width: 200px;
+    height: 50%;
+}
+#search-bar:hover{
+    cursor: text;
+}
+#search-bar input{
+    color: rgba(0,0,0,0.5);
+    height: 90%;
+    outline: none;
+    background: none;
+    border: none;
+}
+#search-icon{
+    height: 80%;
+}
+
+
+#header-icons{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: 15%;
+    height: 50%;
+    background-color: red;
+}
+.header-icons-link{
+    width: 20px;
+    background:none;
+    margin-right: 5%;
+}
+.header-icons-img, #header-user-profile-pic{
+    height:90%;
+}
+
+/* -------------------- post */
+#main-content{
+    position: absolute;
+    align-self: center;
+    width: 900px;
+    height: 550px;
+    margin-top: 5%;
+    /*margin: 5% 5%;*/
+    display: flex;
+    align-items: center;
+}
+#post{
+    width: 550px;
+    height: 550px;
+}
+.post-pic{
+    width: 100%;
+}
+#side-bar{
+    width: 348px;
+    height: 550px;
+    background-color: white;
+    border: 1px solid rgb(219,219,219);
+    border-radius: 1%;
+}
+#side-bar-header{
+    display:flex;
+    align-items: center;
+    height: 54px;
+    background: none;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+.profile-pic{
+    height: 30px;
+    border: 1px solid rgb(219,219,219);
+    border-radius: 100%;
+}
+#dot-icon{
+    width: 7px;
+}
+#plus-icon{
+    width: 15px;
+}
+
+#comments-area{
+    width: 328px;
+    height: 328px;
+    padding: 10px;
+    overflow-y: scroll;
+    border-bottom: 5px solid white;
+}
+#comments-area p{
+    justify-self: center;
+
+}
+#comments-area::-webkit-scrollbar {
+    display: none;
+}
+
+#side-bar-footer{
+    height: 140px;
+    border-top: 1px solid rgb(219,219,219);
+}
+#side-bar-footer-icons{
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+#side-bar-footer-icons img{
+    height: 70%;
+}
+
+#side-bar-footer-likes{
+    padding: 10px;
+    display: flex;
+    height: 35px;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+
+#side-bar-footer-comment{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 49px;
+}
+#comment-input{
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 20px;
+    height:70%;
+    width: 75%;
+}
