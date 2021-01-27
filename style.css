@@ -273,3 +273,71 @@ main{
     cursor: pointer;
 }
 
+/* -------------------- Responsive design 
+
+/* TABLETS/MOBILE- SMALL DEVICES */
+@media screen and (max-width:696px){
+    #search-bar{
+        display:none;
+    }
+    #link-logo-header{
+        margin-right: 7%;
+    }
+    #main-content{
+        margin-top: 20px;
+        width: 90%;
+        flex-direction: column;
+    }
+    #post{
+        width: 100%;
+    }
+    .post-pic{
+        width: 100%;
+    }
+    #side-bar-header{
+        display: none;
+    }
+    #side-bar{
+        width: 100%;
+    }
+    #post-description-and-comments-area{
+        width: 100%;
+        padding: 5% 0;
+    }
+    #post-description{
+        width: 60%;
+    }
+    #comment-input{
+        width: 70%;
+    }
+}
+/* TABLETS/DESKTOP - MEDIUM DEVICES */
+@media screen and (min-width:696px) and (max-width:960px){
+    #search-bar{
+        margin: 0px 10%;
+    }
+    #main-content{
+        width: 95%;
+    }
+    #post{
+        width: 60%;
+        display: flex;
+        align-items: center;
+    }
+    .post-pic{
+        width: 100%;
+    }
+    #side-bar{
+        width: 40%;
+    }
+    #post-description-and-comments-area{
+        width: 100%;
+        padding: 5% 0;
+    }
+    #post-description{
+        width: 70%;
+    }
+    #comment-input{
+        width: 70%;
+    }
+}
