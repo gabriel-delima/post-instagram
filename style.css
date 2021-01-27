@@ -222,14 +222,18 @@ main{
     height: 100%;
 }
 #side-bar-footer-left-icons img{
-    margin: 15px 7px;
+    margin: 15px 10px;
     height: 70%;
     cursor: pointer;
 }
 #side-bar-footer-icons img:first-child{
     margin-left: 20px;
-}
+
+}#side-bar-footer-icons img:last-child{
+    margin-left: 14px;  /* a rotação diminuiu a margem então ela*/
+}                       /* deve ser maior que as outras pra equilibrar*/
 #save-icon{
+    margin-right: -10px;
     height: 55px
 }
 /* side-bar-footer likes area*/
@@ -272,7 +276,9 @@ main{
     color:rgb(183,225,253);
     cursor: pointer;
 }
-
+#origami-icon-1 , #origami-icon-2{
+    transform:rotate(-45deg);
+}
 /* -------------------- Responsive design 
 
 /* TABLETS/MOBILE- SMALL DEVICES */
